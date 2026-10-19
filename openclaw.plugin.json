@@ -1,8 +1,8 @@
 {
   "id": "preuve",
-  "name": "Preuve",
-  "description": "Score a startup idea against live market evidence from OpenClaw: viability score, real competitors, risks, source-linked citations, and a structured JSON export of the report.",
-  "version": "0.1.0",
+  "name": "Preuve AI",
+  "description": "Preuve AI for OpenClaw: score a startup idea against live market evidence, with a viability score, real competitors, risks, source-linked citations, and a structured JSON export of the report.",
+  "version": "0.1.1",
   "categories": ["other"],
   "configSchema": {
     "type": "object",

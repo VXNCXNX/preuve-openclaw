@@ -1,7 +1,7 @@
-# Preuve plugin for OpenClaw
+# Preuve AI plugin for OpenClaw
 
 Score a startup idea against live market evidence without leaving OpenClaw.
-Same analysis as [preuve.ai](https://preuve.ai): a viability score and verdict,
+Same analysis as [Preuve AI](https://preuve.ai): a viability score and verdict,
 real competitors, risks, and source-linked citations from 60+ live sources,
 exported as structured JSON your agent can read.
 
@@ -48,7 +48,7 @@ same `clientRunId` never spends twice.
 ## Prefer MCP?
 
 The same tools, plus enrichment and Consultant or Agency workspaces, are served
-by the [Preuve MCP server](https://preuve.ai/mcp) at `https://mcp.preuve.ai/mcp`.
+by the [Preuve AI MCP server](https://preuve.ai/mcp) at `https://mcp.preuve.ai/mcp`.
 In claude.ai, Claude Code, Cursor or Codex it signs you in with OAuth, which
 works on a free account. Full API reference at [docs.preuve.ai](https://docs.preuve.ai).
 
