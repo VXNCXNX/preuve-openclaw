@@ -1,0 +1,50 @@
+{
+  "name": "@vxncxnx/preuve",
+  "version": "0.1.0",
+  "description": "Preuve plugin for OpenClaw: score a startup idea against live market evidence and export the report",
+  "license": "MIT",
+  "author": "Preuve AI <support@preuve.ai> (https://preuve.ai)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "openclaw.plugin.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.8.0"
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.34.52"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "openclaw": "2026.10.5",
+    "typescript": "^5.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VXNCXNX/preuve-openclaw.git"
+  },
+  "homepage": "https://preuve.ai/mcp",
+  "keywords": [
+    "openclaw",
+    "openclaw-plugin",
+    "clawhub",
+    "preuve",
+    "startup",
+    "idea-validation",
+    "market-research",
+    "competitor-analysis"
+  ],
+  "openclaw": {
+    "extensions": [
+      "./dist/index.js"
+    ]
+  }
+}

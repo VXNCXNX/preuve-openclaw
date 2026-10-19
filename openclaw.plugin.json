@@ -1,0 +1,40 @@
+{
+  "id": "preuve",
+  "name": "Preuve",
+  "description": "Score a startup idea against live market evidence from OpenClaw: viability score, real competitors, risks, source-linked citations, and a structured JSON export of the report.",
+  "version": "0.1.0",
+  "categories": ["other"],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "apiKey": {
+        "type": "string",
+        "description": "Preuve API key (prv_...). Create one at https://preuve.ai/app?settings=apiKeys. It is shown once."
+      }
+    },
+    "required": ["apiKey"]
+  },
+  "contracts": {
+    "tools": [
+      "preuve_start_analysis",
+      "preuve_get_analysis",
+      "preuve_export_analysis",
+      "preuve_generate_ideas"
+    ]
+  },
+  "toolMetadata": {
+    "preuve_start_analysis": {
+      "configSignals": [{ "rootPath": "plugins.entries.preuve.config", "required": ["apiKey"] }]
+    },
+    "preuve_get_analysis": {
+      "configSignals": [{ "rootPath": "plugins.entries.preuve.config", "required": ["apiKey"] }]
+    },
+    "preuve_export_analysis": {
+      "configSignals": [{ "rootPath": "plugins.entries.preuve.config", "required": ["apiKey"] }]
+    },
+    "preuve_generate_ideas": {
+      "configSignals": [{ "rootPath": "plugins.entries.preuve.config", "required": ["apiKey"] }]
+    }
+  }
+}
