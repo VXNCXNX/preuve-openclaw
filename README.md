@@ -7,6 +7,8 @@ exported as structured JSON your agent can read.
 
 ## Install
 
+Listed on [ClawHub](https://clawhub.ai/vxncxnx/plugins/preuve).
+
 ```bash
 openclaw plugins install @vxncxnx/preuve
 openclaw plugins enable preuve
