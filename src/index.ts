@@ -115,14 +115,14 @@ const IdeasParams = Type.Object({
 
 export default definePluginEntry({
   id: "preuve",
-  name: "Preuve",
+  name: "Preuve AI",
   description: "Score startup ideas against live market evidence with Preuve AI.",
   register(api) {
     const cfg = () => readConfig(api);
 
     api.registerTool({
       name: "preuve_start_analysis",
-      label: "Preuve: start an analysis",
+      label: "Preuve AI: start an analysis",
       description:
         "Validate one startup or business idea against live market evidence (60+ sources). Async: returns an analysis id and status, then poll preuve_get_analysis every 10 to 30 seconds until status is COMPLETED, and read the report with preuve_export_analysis. scanType defaults to starter, which is free; deep spends the user's paid quota, so pass it only on an explicit request. clientRunId is the idempotency key: reuse the same value to retry safely, since a re-POST replays the existing run instead of starting a second one. Runs are private unless publish is true.",
       parameters: StartParams,
@@ -139,7 +139,7 @@ export default definePluginEntry({
 
     api.registerTool({
       name: "preuve_get_analysis",
-      label: "Preuve: poll an analysis",
+      label: "Preuve AI: poll an analysis",
       description:
         "Current state of an analysis started with preuve_start_analysis: status (QUEUED, RUNNING, COMPLETED, FAILED), readyForExport, and the report URL. Returns no report content; call preuve_export_analysis once readyForExport is true. Poll every 10 to 30 seconds.",
       parameters: IdParams,
@@ -153,7 +153,7 @@ export default definePluginEntry({
 
     api.registerTool({
       name: "preuve_export_analysis",
-      label: "Preuve: export a report",
+      label: "Preuve AI: export a report",
       description:
         "Structured JSON of a COMPLETED analysis: viability score and verdict, competitors, risks, market sizing, and source-linked citations. verbosity summary (the default) keeps every scored field and the verdict narrative and fits one tool result; full adds the section prose. A 409 ANALYSIS_NOT_COMPLETE means poll preuve_get_analysis and try again; the export never returns partial data.",
       parameters: ExportParams,
@@ -170,7 +170,7 @@ export default definePluginEntry({
 
     api.registerTool({
       name: "preuve_generate_ideas",
-      label: "Preuve: generate startup ideas",
+      label: "Preuve AI: generate startup ideas",
       description:
         "Generate startup ideas from the user's interests, skills, budget or audience. Synchronous and free of scan quota. Free accounts get 5 generations per rolling 24 hours (GENERATION_LIMIT when exhausted). Hand a promising idea to preuve_start_analysis to score it.",
       parameters: IdeasParams,

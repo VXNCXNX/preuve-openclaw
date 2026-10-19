@@ -1,7 +1,7 @@
 {
   "name": "@vxncxnx/preuve",
-  "version": "0.1.0",
-  "description": "Preuve plugin for OpenClaw: score a startup idea against live market evidence and export the report",
+  "version": "0.1.1",
+  "description": "Preuve AI plugin for OpenClaw: score a startup idea against live market evidence and export the report",
   "license": "MIT",
   "author": "Preuve AI <support@preuve.ai> (https://preuve.ai)",
   "type": "module",
